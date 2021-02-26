@@ -20,6 +20,8 @@ router.post('/submit-form', (req, res) => {
 
     materias.push(materia);
     console.log(materias);
+
+    res.end();
 })
 
 module.exports = router;
