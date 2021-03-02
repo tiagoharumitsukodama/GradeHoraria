@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const materias = [];
+const relacaoMaterias = [];
 
 router.use(express.urlencoded({ 
     extended: true 
@@ -24,10 +24,10 @@ router.post('/submit-form', (req, res) => {
         }
     };
 
-    materias.push(materia);
-    console.log(materias);
-
+    relacaoMaterias.push(materia);
     res.end();
+
+    console.log(relacaoMaterias);
 })
 
 module.exports = router;
