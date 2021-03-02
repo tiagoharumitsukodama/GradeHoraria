@@ -15,7 +15,13 @@ router.post('/submit-form', (req, res) => {
     const materia = {
         nome: req.body.materia,
         aulasSemanais: req.body.aulasSemanais,
-        disponibilidadeSegunda: req.body.disponibilidadeSegunda
+        disponibilidade: {
+            iniSeg: req.body.iniSeg,
+            fimSeg: req.body.iniSeg,
+            iniTer: req.body.iniTer,
+            fimTer: req.body.fimTer
+            //falta o resto
+        }
     };
 
     materias.push(materia);
