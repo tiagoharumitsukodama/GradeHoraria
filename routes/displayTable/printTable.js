@@ -51,6 +51,7 @@ function montarTabela(){
                 cell.innerHTML = semana[dia][numeroRow].nome;
             else
                 cell.innerHTML = " --- ";
+                
         }
     }
 

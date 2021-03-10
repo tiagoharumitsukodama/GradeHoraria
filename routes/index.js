@@ -1,7 +1,8 @@
 const express = require('express');
 const router = express.Router();
+const cadastrar = require('./cadastrar');
 
-const materias = [];
+const TodasMaterias = [];
 
 router.use(express.urlencoded({ 
     extended: true 
@@ -12,14 +13,9 @@ router.get('/', (req, res) => {
 });
   
 router.post('/submit-form', (req, res) => {
-    const materia = {
-        nome: req.body.materia,
-        aulasSemanais: req.body.aulasSemanais,
-        disponibilidadeSegunda: req.body.disponibilidadeSegunda
-    };
 
-    materias.push(materia);
-    console.log(materias);
+    cadastrar.alimetar(req.body, TodasMaterias)
+    console.log(TodasMaterias)
 
     res.end();
 })
