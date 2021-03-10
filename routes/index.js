@@ -1,7 +1,8 @@
 const express = require('express');
 const router = express.Router();
+const cadastrar = require('./cadastrar');
 
-const relacaoMaterias = [];
+const TodasMaterias = [];
 
 router.use(express.urlencoded({ 
     extended: true 
@@ -12,22 +13,11 @@ router.get('/', (req, res) => {
 });
   
 router.post('/submit-form', (req, res) => {
-    const materia = {
-        nome: req.body.materia,
-        aulasSemanais: req.body.aulasSemanais,
-        disponibilidade: {
-            iniSeg: req.body.iniSeg,
-            fimSeg: req.body.iniSeg,
-            iniTer: req.body.iniTer,
-            fimTer: req.body.fimTer
-            //falta o resto
-        }
-    };
 
-    relacaoMaterias.push(materia);
+    cadastrar.alimetar(req.body, TodasMaterias)
+    console.log(TodasMaterias)
+
     res.end();
-
-    console.log(relacaoMaterias);
 })
 
 module.exports = router;
