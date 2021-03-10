@@ -15,8 +15,6 @@ router.get('/', (req, res) => {
 router.post('/submit-form', (req, res) => {
 
     cadastrar.alimetar(req.body, TodasMaterias)
-    console.log(TodasMaterias)
-
     res.end();
 })
 

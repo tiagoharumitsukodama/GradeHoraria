@@ -2,16 +2,15 @@ Middle
 
 <form action="/submit-form" method="POST">
     <div>
-        <input type="text" name="nomeComponente" placeholder="materia">
-    </div>
-    <div>
         <input type="number" name="quantidadeMaximaAulasDia" placeholder="quantidadeMaximaAulasDia">
     </div>
-
+    <div>
+        <input type="text" name="nomeComponente" placeholder="Componente Curricular/Matéria">
+    </div>
     <input type="submit">
 </form>
+<button id="addTurma" onclick="addTurma()">Adicionar Turma para o Componente</button>
 <button>possibilidade</button>
-<button id="addComponente" onclick="addComponente()">Adicionar Componente</button>
 
 
 
@@ -21,17 +20,17 @@ Middle
             return () => indexComponente++;
     })();
 
-    function addComponente() {
+    function addTurma() {
         let formulario = document.querySelector('form');
         let div = document.createElement('DIV');
         let index = addIndexComponente();
 
-            div.innerHTML = 
+        div.innerHTML = 
 
-            `<div class="DivParaComponente">
-            <input type='text' name="nomeTurma" required placeholder="Por exemplo 3A">
-            <input type="number" name="quantidadeAulasTurma" placeholder="Qnt aulas turma" required>
-            </div>`
+        `<div class="DivParaComponente">
+        <input type='text' name="nomeTurma" required placeholder="Por exemplo 3A">
+        <input type="number" name="quantidadeAulasTurma" placeholder="Qnt aulas turma" required>
+        </div>`
 
         formulario.appendChild(div);
     }
