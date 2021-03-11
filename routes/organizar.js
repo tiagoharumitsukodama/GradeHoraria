@@ -72,7 +72,6 @@ function listaMatrizEpontuacao(TodasTurmas) {
 
 
                 } catch (error) {
-                    console.log(error);
                     Matriz[indicekeyTurma].push(`---`);
                     PontoMatriz --;
                 }
