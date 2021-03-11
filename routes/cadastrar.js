@@ -13,12 +13,14 @@ function alimetar( reqBody, TodasTurmas ){
         if (!Array.isArray(TodasTurmas[_nomeTurma]))
             TodasTurmas[_nomeTurma] = [];
 
-        TodasTurmas[_nomeTurma].push({
-            nomeTurma: _nomeTurma,
-            nomeComponente: _nomeComponente,
-            quantidadeAulasTurma: _quantidadeTurma,                        
+        for (let q=0; q<_quantidadeTurma; q++) {
+
+            TodasTurmas[_nomeTurma].push({
+                nomeTurma: _nomeTurma,
+                nomeComponente: _nomeComponente
         });
-    }
+        }
+    }console.log("cadastrou")
 }
 
 module.exports = {alimetar}
