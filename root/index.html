@@ -7,7 +7,7 @@
     <title>Montar Grade Horária</title>
 
     <link rel="stylesheet" href="style/index.css">
-    <script src="./script/index.js" defer></script>
+    <script type='module' src="./script/index.js" defer></script>
 </head>
 <body>
     <header>
@@ -17,7 +17,7 @@
         <div class="inserir_dados_iniciais">
             <label for="descricaoTurmas">Descrição turmas</label>
             <input type="text" name="descricaoTurmas" placeholder="ex: 1A, 1B, 2A, 3C">
-            <button type="button" onclick="addTurma()">Pronto</button>
+            <button type="button" id="IdaddTurma">Pronto</button>
         </div>
 
         <table id="inserir_dados" style="display: none;">
@@ -28,7 +28,8 @@
                 <td><input type="text" name="nomeComponente" placeholder="ex: Física, Matemática, ..."></td>  
             </tr>
         </table>
-        <button type="button" id="IdaddComponente" onclick="addComponente()" style="display: none;">+ Componentes</button>
+        <button type="button" id="IdaddComponente" style="display: none;">+ Componentes</button>
+        <button type="button" id="Idenviar" style="display: none;">Enviar</button>
     </section>
 </body>
 </html>
