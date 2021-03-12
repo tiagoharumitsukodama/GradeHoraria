@@ -13,13 +13,3 @@ body {
     max-height: 90vh;
 
 }
-
-.container {
-    position: absolute;
-    top: 10vh;
-    
-    width: 100vw;
-    height: 90vh;
-
-    background-color:rgb(219, 219, 219);
-}

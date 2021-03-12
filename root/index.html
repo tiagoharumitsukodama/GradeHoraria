@@ -6,31 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Montar Grade Horária</title>
 
-    <link rel="stylesheet" href='/stylesheets/main.css'>
-    <script src="/javascripts/main.js"></script>
+    <link rel="stylesheet" href='./style/index.css'>
 </head>
 <body>
     <header>
         <h1>Ferramentas educationais</h1>
     </header>
-    <br>
     <div class="container">
-        <form action="/submit-form" method="POST">
-        
-            <div class="ferramentas_gerais">
-                <input type="number" name="quantidadeMaximaAulasDia" placeholder="N°Max aulas dia">
-                <button id="addTurma" onclick="addTurma()">+ Turma</button>
-                <button id="addTurma" onclick="addTurma()">+ Componente</button>
-                <input type="submit">
-            </div>
-        
-            <div class="ferramentas_edicao">
-                <div class="info_componente">
-                <input type="text" name="nomeComponente" placeholder="Componente Curricular/Matéria" required>
-            </div>
-        </div>
-        </form>
-        </div>        
-    <br>
+        <table id="inserir_dados">
+            <tr>
+                <th>Componente Curricular</th><th>Turma</th><th>Nº aula</th></tr>
+            </tr>
+            <tr>
+                <td><input type="text" name="nomeComponente"></td>
+                <td><input type="text" name="nomeTurma"></td>
+                <td><input type="number" name="numeroAulasComponente"></td>
+                <button type="button" id="addTurma">+</button>
+            </tr>
+        </table>
+    </div>
 </body>
 </html>
