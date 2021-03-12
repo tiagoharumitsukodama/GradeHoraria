@@ -12,15 +12,30 @@ section {
     font-size: 0.9rem;
 }
 
+section {
+    max-width: 100vw;
+    overflow: scroll;
+}
+
 section > * {
     margin-top: 10px;
 }
 
 .inserir_dados_iniciais {
+    width: 400px;
+    height: 100px;
+    padding: 5px;
+    padding-top: 15px;
+
+    border: 1px solid rgba(121, 121, 121, 0.685);
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
     display: flex;
     flex-direction: column;
 }
 
-.inserir_dados_iniciais > label {
-    margin-top: 15px;
+.inserir_dados_iniciais > input {
+    margin-bottom: 15px;
 }
