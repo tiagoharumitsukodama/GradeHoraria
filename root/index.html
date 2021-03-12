@@ -6,24 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Montar Grade Horária</title>
 
-    <link rel="stylesheet" href='./style/index.css'>
+    <link rel="stylesheet" href="style/index.css">
 </head>
 <body>
     <header>
-        <h1>Ferramentas educationais</h1>
+        <h1>Ferramentas educacionais</h1>
     </header>
-    <div class="container">
+    <section>
+        <div class="inserir_dados_iniciais">
+            <label for="numeroComponentes">Nº Componentes</label>
+            <input type="text" name="numeroComponentes" placeholder="ex: 12">
+            <label for="descricaoTurmas">Descrição turmas</label>
+            <input type="text" name="descricaoTurmas" placeholder="ex: 1A, 1B, 2A, 3C">
+        </div>
+
+
         <table id="inserir_dados">
             <tr>
-                <th>Componente Curricular</th><th>Turma</th><th>Nº aula</th></tr>
+                <th>Componente Curricular</th>
+                <th>1A</th>
+                <!-- ADD AQUI -->
             </tr>
-            <tr>
-                <td><input type="text" name="nomeComponente"></td>
-                <td><input type="text" name="nomeTurma"></td>
-                <td><input type="number" name="numeroAulasComponente"></td>
-                <button type="button" id="addTurma">+</button>
-            </tr>
+
+            <div class="inserirComponente">
+                <tr>
+                    <td><input type="text" name="nomeComponente"></td>
+                    <td><input type="number" name="numeroAulasComponente"></td>
+                    <!-- ADD AQUI-->
+                </tr>
+            </div>
+
         </table>
-    </div>
+    </section>
 </body>
 </html>
