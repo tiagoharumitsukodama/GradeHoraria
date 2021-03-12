@@ -1,20 +1,19 @@
 <div class="container">
-<div class="ferramentas_edicao">
 
+
+<div class="ferramentas_gerais">
+    <input type="number" name="quantidadeMaximaAulasDia" placeholder="N°Max aulas dia">
+    <button id="addTurma" onclick="addTurma()">+ Turma</button>
+    <button id="addTurma" onclick="addTurma()">+ Componente</button>
+    <input type="submit">
+</div>
+
+
+<div class="ferramentas_edicao">
     <form action="/submit-form" method="POST">
-        <div clas='info_geral'>
-            <input type="number" name="quantidadeMaximaAulasDia" placeholder="quantidadeMaximaAulasDia">
-        </div>
         <div class="info_componente">
             <input type="text" name="nomeComponente" placeholder="Componente Curricular/Matéria" required>
-            <button id="addTurma" onclick="addTurma()">Adicionar Turma</button>
         </div>
-        <input type="submit">
     </form>
-    
 </div>
 </div>
-
-<style>
-
-</style>
