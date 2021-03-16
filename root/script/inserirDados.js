@@ -107,6 +107,5 @@ export function extrairDados(TodasTurmas) {
 
 
     alimentar(legendaParaInserir, tabelaAInserir);
-    console.log(TodasTurmas)
 }
 

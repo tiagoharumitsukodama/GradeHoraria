@@ -1,4 +1,4 @@
-function listaMatrizEpontuacao(TodasTurmas) {
+export default function listaMatrizEpontuacao(TodasTurmas) {
 
     let listaMatrizEpontuacao = [];
 
@@ -59,11 +59,11 @@ function listaMatrizEpontuacao(TodasTurmas) {
                         }
 
                     } while (typeof componente === 'undefined' ||
-                            listaDeComponentesJaForamRodada.indexOf(componente.nomeComponente)!==-1)
+                            listaDeComponentesJaForamRodada.indexOf(componente)!==-1)
 
 
-                    Matriz[indicekeyTurma].push(componente.nomeComponente)
-                    listaDeComponentesJaForamRodada.push(componente.nomeComponente);
+                    Matriz[indicekeyTurma].push(componente)
+                    listaDeComponentesJaForamRodada.push(componente);
                     copiaTodasTurmas[keyTurma].splice(indiceCopiaTodasTurmasKeyTurma, 1);
                     PontoMatriz ++;
 
@@ -81,5 +81,3 @@ function listaMatrizEpontuacao(TodasTurmas) {
         return PontoMatriz;
     }
 }
-
-module.exports = {listaMatrizEpontuacao};
