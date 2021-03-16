@@ -13,7 +13,6 @@ export function addTurma() {
         div.style.display = "none";
 
         btEnviar.style.display = "block";
-        btEnviar.addEventListener('click', extrairDados);
     }
 
     let listaTurma = document.querySelector(".inserir_dados_iniciais input").value.split(',');
@@ -54,12 +53,12 @@ export function addComponente() {
     tabela.innerHTML += linha.innerHTML;
 }
 
-export function extrairDados() {
+
+export function extrairDados(TodasTurmas) {
 
     let tabela = document.querySelectorAll ('table tr');
     let tabelaAInserir = [];
     let legendaParaInserir = [];
-
 
     for (let indiceRow=0; indiceRow<tabela.length; indiceRow++) {
 
@@ -69,7 +68,7 @@ export function extrairDados() {
         for (let indiceCell=0; indiceCell<row.length; indiceCell++) {
 
             if (indiceRow === 0) {
-                legendaParaInserir.push(row[indiceCell].innerText)
+                linhaParaInserir.push(row[indiceCell].innerText)
             }
             else {
                 let valor = row[indiceCell].children[0].value;
@@ -78,32 +77,36 @@ export function extrairDados() {
         }
         tabelaAInserir.push(linhaParaInserir);
     }
-    legendaParaInserir.shift();
+    legendaParaInserir = tabelaAInserir.shift();
+
+
+
+    function alimentar(nomeTurmas, tabelaNumeroAulasMateria){
+
+        nomeTurmas.shift(); // Descartar "Componentes Curriculares" da lista
+    
+        for (let indiceComponente in tabelaNumeroAulasMateria) {
+    
+            let listaNumeroAulasMateria = tabelaNumeroAulasMateria[indiceComponente]
+            let nomeComponente = listaNumeroAulasMateria.shift();
+    
+            for (let indiceTurma in nomeTurmas) {
+    
+                let nomeTurma = nomeTurmas[indiceTurma];
+                let quantidadeAulas = listaNumeroAulasMateria[indiceTurma];
+    
+                if (!Array.isArray(TodasTurmas[nomeTurma]))
+                    TodasTurmas[nomeTurma] = [];
+    
+                for (let counter=0; counter<quantidadeAulas; counter++) {
+                    TodasTurmas[nomeTurma].push(nomeComponente);
+                }
+            }
+        }
+    }
+
 
     alimentar(legendaParaInserir, tabelaAInserir);
+    console.log(TodasTurmas)
 }
 
-export function alimentar(legendaParaInserir, tabela){
-    /*
-        let _nomeComponente = reqBody.nomeComponente;
-        let _nomeTurma;
-        let _quantidadeTurma;
-        
-        for (let indiceTurma in reqBody.nomeTurma) {
-    
-            _nomeTurma =  reqBody.nomeTurma[indiceTurma];
-            _quantidadeTurma = reqBody.quantidadeAulasTurma[indiceTurma];
-    
-            if (!Array.isArray(TodasTurmas[_nomeTurma]))
-                TodasTurmas[_nomeTurma] = [];
-    
-            for (let q=0; q<_quantidadeTurma; q++) {
-    
-                TodasTurmas[_nomeTurma].push({
-                    nomeTurma: _nomeTurma,
-                    nomeComponente: _nomeComponente
-            });
-            }
-        }*/ console.log(tabela)
-    }
-    
