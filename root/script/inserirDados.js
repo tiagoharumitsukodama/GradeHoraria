@@ -58,7 +58,7 @@ export function extrairDados(TodasTurmas) {
 
     let tabela = document.querySelectorAll ('table tr');
     let tabelaAInserir = [];
-    let legendaParaInserir = [];
+    let legendaParaInserir;
 
     for (let indiceRow=0; indiceRow<tabela.length; indiceRow++) {
 
@@ -78,7 +78,6 @@ export function extrairDados(TodasTurmas) {
         tabelaAInserir.push(linhaParaInserir);
     }
     legendaParaInserir = tabelaAInserir.shift();
-
 
 
     function alimentar(nomeTurmas, tabelaNumeroAulasMateria){
@@ -107,6 +106,7 @@ export function extrairDados(TodasTurmas) {
 
 
     alimentar(legendaParaInserir, tabelaAInserir);
-    console.log(TodasTurmas)
+
+    
 }
 
