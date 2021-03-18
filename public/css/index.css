@@ -1,0 +1,93 @@
+@import 'header.css';
+@import 'aside.css';
+@import 'io.css';
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap');
+
+* {
+    margin: 0px auto;
+    padding: 0px;
+}
+
+button {
+    width: 143px;
+    height: 32px;
+    margin-top: 20px;
+
+    background: #E4E3E3;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px rgba(133, 132, 132, 0.596);
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: bolder;
+
+    color: #000000;
+}
+
+button:disabled {
+    background-color: rgb(138, 138, 138);
+    color: rgba(255, 255, 255, 0.473);
+
+    box-shadow: none;
+}
+
+main {
+    min-height: 800px;
+    width: auto;
+    padding-top: 40px;
+    background: rgb(194,192,192);
+    background: linear-gradient(180deg, rgba(194,192,192,1) 0%, rgba(194,192,192,1) 78%, rgba(194,192,192,0.1353711790393013) 93%, rgba(194,192,192,0) 100%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+div.primeiraLinha, div.segundaLinha {
+    margin-top: 20px;
+}
+
+button.main {
+    background: rgba(142, 241, 159, 0.658);
+    border-radius: 5px;
+
+    color: rgb(65, 65, 65);
+}
+
+button.main:disabled {
+    background: rgba(104, 214, 122, 0.247);
+    color: rgba(68, 68, 68, 0.301);
+
+    box-shadow: none;
+}
+
+div.lousa {
+    margin-top: 20px;
+    margin-bottom: 250px;
+    padding: 20px;
+
+    width: fit-content;
+    height: fit-content;
+
+    background: #FFFFFF;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h2, h4 {
+    padding: 0px;
+    margin-top: 20px;
+
+    font-family: 'Merriweather', serif;
+}

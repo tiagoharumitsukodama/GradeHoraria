@@ -1,0 +1,23 @@
+aside {
+    width: 200px;
+    height: auto;
+    border: 1px solid transparent;
+
+    float: left;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+button#botaoExportar {
+    background: rgba(104, 214, 122, 0.658);
+}
+
+button#botaoExportar:disabled {
+    background-color: rgb(138, 138, 138);
+    color: rgba(255, 255, 255, 0.473);
+
+    box-shadow: none;
+}
