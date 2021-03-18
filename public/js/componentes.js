@@ -15,7 +15,7 @@ export default function componentes() {
     btDireito.style.display = 'block';
     btDireito.innerHTML = '+Componentes';
     h2.innerHTML = 'Componentes';
-    h4.innerHTML = 'Agora, diga o nome da matéria e a quantidade de aulas para cada turma.';
+    h4.innerHTML = 'Legal! Agora, diga o nome da matéria e a quantidade de aulas para cada turma.';
 
     let io = document.querySelector('div#io');
     io.replaceChild( montarTabelaInput(Listalegenda) , io.firstElementChild)

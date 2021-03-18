@@ -17,7 +17,7 @@ export default function montarGrade() {
     btMontarGrade.disabled = false;
     btEsquerdo.style.display = 'block';
     h2.innerHTML = 'Montar grade';
-    h4.innerHTML = 'Monte a sua grade clicando em “Outro” ou invertendo as linhas.';
+    h4.innerHTML = 'Tenho algumas opções de grade, mas você pode alterar as linhas selecionando as linhas e clicando em "Inverter".';
     btDireito.innerHTML = 'Outro';
     btEsquerdo.innerHTML = 'Inverter';
 

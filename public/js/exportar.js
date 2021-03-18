@@ -15,7 +15,7 @@ export default function exportar() {
     btEsquerdo.style.display = 'none';
 
     h2.innerHTML = 'Exportar';
-    h4.innerHTML = 'Parambéns! Agora, só clicar em exportar.';
+    h4.innerHTML = 'Parambéns! Essa é a sua grade! Se quiser, pode clicar em "Exportar" para gerar um arquivo.';
 
     gerarArquivo()
 }

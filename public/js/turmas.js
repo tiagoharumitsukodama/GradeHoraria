@@ -10,7 +10,7 @@ export default function turmas () {
     btTurmas.disabled = false;
     btComponentes.disabled = true;
     h2.innerText = 'Turmas';
-    h4.innerText = 'Insira as turmas cuja a grade deseja montar.';
+    h4.innerText = 'Queremos te ajudar a montar a grade horária da sua escola. Primeito, digite o código de cada turma separados por vírgula.';
 
     btProximo.onclick = () => {
         
