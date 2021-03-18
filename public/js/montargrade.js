@@ -25,12 +25,12 @@ export default function montarGrade() {
     let ListaMatrizPontuacao = listaMatrizEpontuacao(TodasTurmas);
     ordenarListaPontosMatriz(ListaMatrizPontuacao);
         
-    montarTabela(ListaMatrizPontuacao[0].matriz);
+    montarTabela(ListaMatrizPontuacao[0].matriz,0);
     let counter = 1;
     btDireito.addEventListener('click', () => {
         if ( counter >= ListaMatrizPontuacao.length )
             counter = 0;
-        montarTabela( ListaMatrizPontuacao[counter++].matriz );
+        montarTabela( ListaMatrizPontuacao[counter++].matriz, counter );
     })
     btEsquerdo.addEventListener('click', () => {
         trocarOrdemLinha();
@@ -70,7 +70,7 @@ function extrairDados() {
 }
 
 
-function montarTabela (Matriz) {
+function montarTabela (Matriz, indiceMatriz) {
 
     let tabela = document.createElement('table');
     let legenda = window.sessionStorage.legendaTabela.split(',');
@@ -82,7 +82,7 @@ function montarTabela (Matriz) {
     tabela.style.backgroundColor = "black";
     tabela.style.maxWidth = '90%';
 
-    legenda[0] = '   ';
+    legenda[0] = indiceMatriz;
     legenda.forEach( elemento => {
         cell = document.createElement('th');
         cell.style.backgroundColor = 'white';

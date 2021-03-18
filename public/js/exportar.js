@@ -26,6 +26,8 @@ function gerarArquivo() {
     let tabela = document.querySelector('table');
     let rows = tabela.rows;
 
+    rows[0].cells[0].innerHTML = '  ';
+
     for (let indiceRow=1; indiceRow<rows.length; indiceRow++) {
         rows[indiceRow].cells[0].innerHTML = indiceRow;
     }
