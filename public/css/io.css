@@ -1,0 +1,24 @@
+
+div#io {
+    margin-top: 20px;
+    padding: 10px;
+
+    min-width: 70vw;
+    max-width: 80vw;
+    min-height: 10vh;
+
+    background: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+input#turmas {
+    height: 1.5rem;
+    max-width: 90%;
+
+    border: 1px solid rgba(161, 161, 161, 0.493);
+}
+

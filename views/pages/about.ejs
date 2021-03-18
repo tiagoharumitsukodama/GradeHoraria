@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <%- include('../partials/head') %>
+    </head>
+<body class="container">
+    <header>
+        <%- include('../partials/header') %>
+    </header>
+    
+    <main>
+        <h2>outra Bundinha</h2>
+
+    </main>
+    <script>
+        window.addEventListener('load', () => {
+            const params = new URL( document.location )
+            const nome = params.get('nome')
+
+            document.querySelector('H2').innerHTML = nome
+        })
+    </script>
+</body>
+</html>

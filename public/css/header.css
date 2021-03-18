@@ -1,0 +1,23 @@
+header {
+    position: relative;
+
+    width: 100vw;
+    height: 10vh;
+    min-height: 90px;
+    margin: 0px auto;
+
+    background-color: cadetblue;
+
+}
+
+h1 {
+    width: 400px;
+    position: absolute;
+    padding: 5px;
+
+    top: 15px;
+    left: 20px;
+    color: cornsilk; 
+
+
+}
