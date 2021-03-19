@@ -8,8 +8,9 @@ app.use(express.static('public'));
 
 app.get('/', (req, res) => {
 
-    res.render('pages/index')
+    res.render('pages/index');
+    console.log('Conectado');
 });
 
 
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
